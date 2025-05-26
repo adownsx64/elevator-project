@@ -1,7 +1,7 @@
 class Utilities:
-    """
-    A class to determine elevator movement and calculate travel time.
-    """
+    """A class to determine elevator movement and calculate travel time."""
+
+    single_floor_travel_time = 10
 
     @staticmethod
     def simulate_elevator(floors_to_visit: list[int], start_floor: int = 1):
@@ -9,7 +9,7 @@ class Utilities:
         Simulate elevator movement.
 
         Parameters:
-            `floors_to_visit` (list of int): The floors the elevator should visit in order.
+            `floors_to_visit` (list[int]): The floors the elevator should visit in order.
             `start_floor` (int): The starting floor of the elevator (default: 1).
 
         Returns:
@@ -23,9 +23,11 @@ class Utilities:
         current_floor = start_floor
         visited_floors = [current_floor]
         total_time = 0
+
         for floor in floors_to_visit:
             if floor != current_floor:
-                total_time += abs(floor - current_floor) * 10
+                total_time += abs(floor - current_floor) * Utilities.single_floor_travel_time
                 current_floor = floor
                 visited_floors.append(current_floor)
+
         return total_time, visited_floors
