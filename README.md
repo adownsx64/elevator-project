@@ -60,4 +60,4 @@ The following Python package is optional but is recommended for running the unit
     ```
 
 ## Usage
-A user launches the application, enters the starting floor and a comma-separated list of floors to visit and clicks "Simulate Elevator." The application then displays the total travel time in seconds and the sequence of floors visited, helping users understand the efficiency of different elevator routes.
+A user launches the application, enters the starting floor, a comma-separated list of floors to visit and clicks "Simulate Elevator." The application then displays the total travel time in seconds and the sequence of floors visited, helping users understand the efficiency of different elevator routes.
